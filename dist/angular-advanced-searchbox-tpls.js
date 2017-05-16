@@ -281,6 +281,7 @@ angular.module('angular-advanced-searchbox', [])
                         angular.forEach($scope.model, function (value, key) {
                             if (key === 'query') {
                                 $scope.searchQuery = value;
+                                updateModel('change', 'query', 0, value);
                             } else {
                                 var searchParam = $filter('filter')($scope.parameters, function (param) { return param.key === key; })[0];
                                 if (searchParam !== undefined)
