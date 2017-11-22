@@ -131,8 +131,8 @@ angular.module('angular-advanced-searchbox', [])
                         $scope.$emit('advanced-searchbox:leavedEditMode', searchParam);
 
                         // remove empty search params
-                        if (!searchParam.value)
-                            $scope.removeSearchParam(index);
+                        if (!searchParam.value) console.log("REMOVED HAHA");
+                            //$scope.removeSearchParam(index);
                     };
 
                     $scope.searchQueryTypeaheadOnSelect = function (item, model, label) {
@@ -185,6 +185,9 @@ angular.module('angular-advanced-searchbox', [])
                     };
 
                     $scope.removeSearchParam = function (index) {
+
+                        console.log("INDEX ->",index);
+
                         if (index === undefined)
                             return;
 
